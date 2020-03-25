@@ -13,9 +13,9 @@ const server = require('http').createServer(app.callback());
 socket(server)
 app.use(logger())
 app.use(historyApiFallback({
-    rewrites: [
-        { from: /\/admin/, to: '/admin.html'}
-      ]
+  rewrites: [
+    { from: /\/admin/, to: '/admin.html'}
+  ]
 }));
 app.use(staticFiles(path.resolve(__dirname, `./public`)))
 app.use(staticFiles(path.resolve(__dirname, `./html`)))
